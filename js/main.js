@@ -223,7 +223,7 @@ $(function() {
     }
   });
 
-  bar.animate(.55);
+  bar.animate(.25);
 
   var bar = new ProgressBar.Line(lineprog5, {
     strokeWidth: 1.72,
@@ -258,6 +258,23 @@ $(function() {
   });
 
   bar.animate(.85);
+
+  var bar = new ProgressBar.Line(lineprog7, {
+    strokeWidth: 1.72,
+    easing: 'easeInOut',
+    duration: 1400,
+    delay: 3200,
+    trailWidth: 1.72,
+    svgStyle: {
+      width: '100%',
+      height: '100%'
+    },
+    step: (state, bar) => {
+      bar.setText(Math.round(bar.value() * 100) + ' %');
+    }
+  });
+
+  bar.animate(.35);
 
   // Contact form
   $('.art-input').keyup(function() {
