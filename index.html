@@ -1,0 +1,612 @@
+<html lang="en">
+  <head>
+    <title>Kunchana.Portfolio</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts End -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            robotoMono: ['"Roboto Mono", monospace'],
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    x-data="{ projects: [], loading : 'boolean' }"
+    x-init="(async () => {
+      loading = true;
+  const response = await fetch('https://kunchana-12bb.restdb.io/rest/works', {
+                      headers: {
+                        'content-type': 'application/json',
+                        'x-apikey': '640886e4bc22d22cf7b25ccb',
+                        'cache-control': 'no-cache',
+                      }
+                  })
+  if (! response.ok) alert(`Something went wrong: ${response.status} - ${response.statusText}`)
+  projects = await response.json();
+  loading = false
+             })"
+    class="bg-[#191923] text-slate-400 select-none"
+  >
+    <div class="loading" x-show="loading">
+      <div class="loader">
+        <span class="loader-text">loading</span>
+        <span class="load"></span>
+      </div>
+    </div>
+
+    <div x-data="{selected : 'first'}" x-show="!loading">
+      <!-- Cursor -->
+      <div class="cursor"></div>
+      <!-- Cursor End -->
+      <!-- Logo & Social -->
+      <div
+        class="flex items-center justify-between fixed left-24 right-24 top-24 z-20"
+      >
+        <div class="flex items-center">
+          <div class="block w-24 h-px mr-3 bg-[#fff]"></div>
+          <button
+            @click="selected = 'first'"
+            @focus="selected = 'first'"
+            class="w-full font-robotoMono"
+            :class="selected === 'first' ? ' text-[#fff]' : ''"
+          >
+            <div class="hover:scale-125 transition-transform duration-700">
+              <img src="assets/img/main-logo.png" alt="" class="w-12" />
+            </div>
+          </button>
+        </div>
+        <div class="flex items-center">
+          <i
+            class="h-4 w-4 mr-3 hover:scale-150 hover:text-white transition-transform duration-700"
+            data-feather="linkedin"
+          ></i>
+          <i
+            class="h-4 w-4 mr-3 hover:scale-150 hover:text-white transition-transform duration-700"
+            data-feather="instagram"
+          ></i>
+          <i
+            class="h-4 w-4 mr-3 hover:scale-150 hover:text-white transition-transform duration-700"
+            data-feather="twitter"
+          ></i>
+          <i
+            class="h-4 w-4 mr-3 hover:scale-150 hover:text-white transition-transform duration-700"
+            data-feather="github"
+          ></i>
+          <div class="block w-24 h-px ml-3 bg-[#fff]"></div>
+        </div>
+      </div>
+      <!-- Logo & Social End -->
+      <!-- <lottie-player
+        src="assets/animation/138767-laptop-animatiion.json"
+        background="transparent"
+        speed="1"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+      ></lottie-player> -->
+      <!-- Background Side Text -->
+      <div
+        class="fixed right-24 bottom-0 text-xs tracking-[3px] flex font-robotoMono z-20"
+        style="writing-mode: vertical-rl"
+      >
+        <div
+          class="hover:scale-105 hover:text-white transition-transform duration-700"
+        >
+          hello@kunchana.com
+        </div>
+        <div class="block w-px h-24 mt-4 mx-auto bg-[#fff]"></div>
+      </div>
+      <!-- Background Side Text End -->
+      <div class="container mx-auto h-screen">
+        <div class="flex flex-row h-full">
+          <!-- Water Mark -->
+          <div
+            class="fixed bottom-0 opacity-[.04] font-robotoMono font-black text-[13rem] z-10"
+          >
+            <div x-show="selected === 'first'">Hello there</div>
+            <div x-show="selected === 'second'">About</div>
+            <div x-show="selected === 'third'">Experience</div>
+            <div x-show="selected === 'fourth'">Work</div>
+            <div x-show="selected === 'fifth'">Contact</div>
+          </div>
+          <!-- Water Mark End -->
+          <!-- Menu Buttons -->
+          <div
+            class="basis-1/4 h-full bg-[#191923] mr-2 place-content-center hidden lg:grid"
+          >
+            <div
+              @keydown.right="$focus.wrap().next()"
+              @keydown.left="$focus.wrap().previous()"
+              class="grid gap-y-4 z-10"
+            >
+              <button
+                @click="selected = 'second'"
+                @focus="selected = 'second'"
+                class="w-full text-start font-robotoMono hover:scale-125 transition-transform duration-700"
+                :class="selected === 'second' ? 'font-bold text-[#fff]' : ''"
+              >
+                <div class="hover-item">
+                  <span class="text-[#fff] mr-0.5">01.</span
+                  ><span
+                    :class="selected === 'second' ? 'font-bold text-[#fff]' : ''"
+                  >
+                    About Me</span
+                  >
+                </div>
+              </button>
+              <button
+                @click="selected = 'third'"
+                @focus="selected = 'third'"
+                class="w-full text-start font-robotoMono hover:scale-125 transition-transform duration-700"
+                :class="selected === 'third' ? 'font-bold text-[#fff]' : ''"
+              >
+                <div class="hover-item">
+                  <span class="text-[#fff] mr-0.5">02.</span
+                  ><span
+                    :class="selected === 'third' ? 'font-bold text-[#fff]' : ''"
+                  >
+                    Where I’ve Worked</span
+                  >
+                </div>
+              </button>
+              <button
+                @click="selected = 'fourth'"
+                @focus="selected = 'fourth'"
+                class="w-full text-start font-robotoMono hover:scale-125 transition-transform duration-700"
+                :class="selected === 'fourth' ? 'font-bold text-[#fff]' : ''"
+              >
+                <div class="hover-item">
+                  <span class="text-[#fff] mr-0.5">03.</span
+                  ><span
+                    :class="selected === 'fourth' ? 'font-bold text-[#fff]' : ''"
+                  >
+                    Some Things I’ve Built</span
+                  >
+                </div>
+              </button>
+              <button
+                @click="selected = 'fifth'"
+                @focus="selected = 'fifth'"
+                class="w-full text-start font-robotoMono hover:scale-125 transition-transform duration-700"
+                :class="selected === 'fifth' ? 'font-bold text-[#fff]' : ''"
+              >
+                <div class="hover-item">
+                  <span class="text-[#fff] mr-0.5">04.</span
+                  ><span
+                    :class="selected === 'fifth' ? 'font-bold text-[#fff]' : ''"
+                  >
+                    Get In Touch</span
+                  >
+                </div>
+              </button>
+            </div>
+          </div>
+          <!-- Menu Buttons End -->
+          <!-- Contents -->
+          <div
+            class="grid basis-full lg:basis-3/4 h-full bg-[#191923] place-content-center"
+          >
+            <div
+              class="z-10 h-screen flex items-center justify-center"
+              x-show="selected === 'first'"
+            >
+              <div class="columns-1 mx-20">
+                <p class="font-robotoMono text-[#fff] mb-8">Hi, my name is</p>
+                <p class="text-7xl text-slate-200 font-bold mb-8">
+                  Kunchana Gayashan.
+                </p>
+                <div
+                  class="text-3xl font-robotoMono text-slate-300 font-bold mb-8"
+                >
+                  &lt;<span class="text-[#fff] font-serif">code</span>&gt; I
+                  <span id="typed"></span>&lt;/<span
+                    class="text-[#fff] font-serif"
+                    >code</span
+                  >&gt;
+                </div>
+                <p class="w-2/3 mb-8">
+                  I'm a software engineer specializing in web development and
+                  mobile application development. With expertise in HTML, CSS,
+                  JavaScript, and more, I'm dedicated to creating seamless,
+                  user-friendly digital experiences. Based in Colombo, LK
+                  &#x1F4CD;
+                </p>
+                <button
+                  class="border rounded-sm border-[#fff] text-[#fff] py-2.5 px-8 font-robotoMono hover:bg-[#ffffff1f] hover:scale-105 transition-transform duration-700"
+                >
+                  Hire me
+                </button>
+              </div>
+            </div>
+            <div
+              class="z-10 h-screen flex items-center justify-center"
+              x-show="selected === 'second'"
+            >
+              <div class="columns-1 ml-20 mr-40">
+                <div
+                  class="h-[65vh] overflow-y-auto flex flex-row no-scrollbar"
+                >
+                  <div class="basis-3/4 h-full mr-12">
+                    <p class="mb-4">
+                      Welcome to my digital realm! I'm Kunchana Gayashan, a
+                      versatile software engineer with a passion for designing,
+                      developing, and creating captivating digital experiences
+                      and I enjoy creating things that live on the internet
+                      started back in 2018. I am proficient in a wide range of
+                      services including web designing & developing, web
+                      application development, mobile application development,
+                      and social media management. My services are designed to
+                      elevate your digital presence, boost your online reach,
+                      and help you achieve your business objectives.
+                    </p>
+                    <p class="mb-4">
+                      I pride myself on being a tech-savvy individual who is
+                      well-versed in multiple programming languages, such as
+                      HTML, CSS, JavaScript, Node JS, Vue JS, Angular JS, Ionic,
+                      Express JS, Mongo Database, MySQL, Tailwind CSS, Alpine
+                      JS, Bootstrap, WordPress, and Ghost. My insatiable thirst
+                      for knowledge and my desire to stay ahead of the curve
+                      drive me to constantly update my skills and techniques. I
+                      have the knowledge and expertise to tackle any digital
+                      challenge. My work is not just limited to coding and
+                      development - I also focus on creating aesthetically
+                      pleasing designs and user-friendly interfaces that are
+                      engaging, interactive, and SEO-friendly.
+                    </p>
+                    <p class="mb-4">
+                      Apart from my technical prowess, I am an award-winning
+                      photographer, recognized as one of the Top 150
+                      photographers in Sri Lanka in the 35Awards competition. My
+                      keen eye for detail and my innate ability to capture
+                      moments make me an exceptional photographer, and I apply
+                      these same skills to my work in the digital world.
+                    </p>
+                    <p class="mb-4">
+                      My goal is to deliver exceptional results that exceed my
+                      clients' expectations. I take pride in working closely
+                      with my clients to understand their needs and objectives,
+                      and I leverage my expertise to create solutions that are
+                      not only functional but also aesthetically pleasing. With
+                      a perfect blend of innovation and creativity, I am
+                      confident that I can help you achieve your digital goals.
+                    </p>
+                    <p class="mb-4">
+                      Thank you for considering me for your next digital
+                      project. I'm excited to hear from you and to help you take
+                      your digital presence to the next level!
+                    </p>
+                  </div>
+                  <div class="basis-1/4">
+                    <div class="fixed z-10">
+                      <img src="assets/img/main.png" alt="" class="w-56" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="z-10 h-screen flex items-center justify-center"
+              x-show="selected === 'third'"
+            >
+              <div class="column-1 mx-20">
+                <div class="list flex flex-col">
+                  <div class="card flex flex-row justify-between items-center">
+                    <div class="flex flex-col info">
+                      <div class="title">Software Engineer @ Cerexio</div>
+                      <div class="author">Jul 2022 - Present</div>
+                      <div class="bottom summary">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Quod ratione impedit temporibus maiores autem
+                        aperiam assumenda exercitationem, quisquam nobis esse.
+                      </div>
+                    </div>
+                    <img
+                      src="assets/img/experience/cerexio.png"
+                      class="mx-2 book"
+                    />
+                  </div>
+                  <div class="card flex flex-row justify-between items-center">
+                    <div class="flex flex-col info">
+                      <div class="title">
+                        Software Developer cum Photographer @ APS Lanka
+                      </div>
+                      <div class="author">May 2020 - Jun 2022</div>
+                      <div class="bottom summary">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Quod ratione impedit temporibus maiores autem
+                        aperiam assumenda exercitationem, quisquam nobis esse.
+                      </div>
+                    </div>
+                    <img
+                      src="assets/img/experience/aps.png"
+                      class="mx-2 book"
+                    />
+                  </div>
+                  <div class="card flex flex-row justify-between items-center">
+                    <div class="flex flex-col info">
+                      <div class="title">
+                        Associate Software Developer @ PixelEye Solutions
+                      </div>
+                      <div class="author">May 2018 - Jun 2020</div>
+                      <div class="bottom summary">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Quod ratione impedit temporibus maiores autem
+                        aperiam assumenda exercitationem, quisquam nobis esse.
+                      </div>
+                    </div>
+                    <img
+                      src="assets/img/experience/pixeleye.jpg"
+                      class="mx-2 book"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="z-10 h-screen flex items-center justify-center"
+              x-show="selected === 'fourth'"
+            >
+              <div class="columns-1 ml-20 mr-60">
+                <div class="h-[65vh] overflow-y-auto no-scrollbar">
+                  <div x-data="{ back: false, read: true }">
+                    <div class="flex justify-center items-center my-14">
+                      <div
+                        class="max-w-4xl mx-auto relative"
+                        x-data="{ activeSlide: 0,  }"
+                      >
+                        <!-- Slides -->
+                        <template
+                          x-for="(item, index) in projects"
+                          :key="index"
+                        >
+                          <div
+                            class="card bg-cover"
+                            :style="'background-image: url(assets/img/work/0' + item.img + '.png);'"
+                            x-show="activeSlide === index"
+                            :key="index"
+                          >
+                            <div class="cardDetails">
+                              <span
+                                class="w-12 text-center"
+                                x-text="item.name"
+                              ></span>
+                              <div
+                                class="cardDetailsHaeder"
+                                x-text="item.img"
+                              ></div>
+                              <div class="cardDetailsButton">
+                                May 2018 - Present
+                              </div>
+                            </div>
+                            <button
+                              @click="back = true, read = false"
+                              x-show="read === true"
+                              class="border rounded-sm border-[#fff] text-[#fff] py-2.5 px-8 font-robotoMono hover:bg-[#ffffff1f] bottom-12 top-auto w-1/2 block text-center -left-12 absolute right-7 m-0 z-[9999]"
+                            >
+                              Read More
+                            </button>
+                            <button
+                              @click="back = false, read = true"
+                              x-show="back === true"
+                              class="border rounded-sm border-white text-white py-2.5 px-8 font-robotoMono hover:bg-[#ffffff45] bottom-12 top-auto w-1/2 block text-center -left-12 absolute right-7 m-0 z-[9999]"
+                            >
+                              back
+                            </button>
+                            <div :class="back ? 'blob-clicked' : 'blob'">
+                              <div
+                                :class="back ? 'glob-clicked' : 'glob'"
+                              ></div>
+                            </div>
+                          </div>
+                        </template>
+
+                        <!-- Prev/Next Arrows -->
+                        <div class="absolute inset-0 flex z-[999]">
+                          <div class="flex items-center justify-start w-1/2">
+                            <button
+                              class="bg-[#ffffff1f] text-[#fff] font-bold hover:shadow-lg rounded-full px-4 py-3 -ml-6 hover:border-[#fff] hover:border"
+                              @click="activeSlide = (activeSlide - 1 + projects.length) % projects.length"
+                            >
+                              &#8592;
+                            </button>
+                          </div>
+                          <div class="flex items-center justify-end w-1/2">
+                            <button
+                              class="bg-[#ffffff1f] text-[#fff] font-bold hover:shadow rounded-full px-4 py-3 -mr-6 hover:border-[#fff] hover:border"
+                              x-on:click="activeSlide = (activeSlide + 1) % projects.length"
+                            >
+                              &#8594;
+                            </button>
+                          </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div
+                          class="absolute w-full flex items-center justify-center px-4"
+                        >
+                          <template
+                            x-for="(item, index) in projects"
+                            :key="index"
+                          >
+                            <button
+                              class="flex-1 w-4 h-2 mt-4 mx-2 mb-0 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-slate-400 hover:shadow-lg"
+                              :class="{ 
+                        'bg-[#fff]': activeSlide === index,
+                        'bg-[#ffffff1f]': activeSlide !== index 
+                    }"
+                              x-on:click="activeSlide = index"
+                            ></button>
+                          </template>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="w-full h-full p-9 grid grid-cols-[repeat(5, 1fr)] grid-rows-[repeat(4, 1fr)] gap-5"
+                    >
+                      <section class="flex items-start item1">
+                        <h1 class="box-title">All Projects</h1>
+                      </section>
+                      <section class="project-card item2 box">
+                        <div class="box-icon"></div>
+                        <div class="box-label">MASTERCLASS</div>
+                        <div class="box-title"></div>
+                        <div class="box-image">
+                          <img
+                            src="https://source.unsplash.com/600x600"
+                            alt=""
+                          />
+                        </div>
+                        <div class="studio-button">
+                          <div class="studio-button-icon">
+                            <i data-feather="external-link"></i>
+                          </div>
+                          <div class="studio-button-label">Open in Studio</div>
+                        </div>
+                      </section>
+                      <section class="project-card item3">
+                        <h2>because interactions make it more fun</h2>
+                      </section>
+                      <section class="project-card item4 box">
+                        <div class="box-icon"></div>
+                        <div class="box-label">MASTERCLASS</div>
+                        <div class="box-title"></div>
+                        <div class="box-image">
+                          <img
+                            src="https://source.unsplash.com/600x600"
+                            alt=""
+                          />
+                        </div>
+                        <div class="studio-button">
+                          <div class="studio-button-icon">
+                            <i data-feather="external-link"></i>
+                          </div>
+                          <div class="studio-button-label">Open in Studio</div>
+                        </div>
+                      </section>
+                      <section class="project-card item5">
+                        <h2>because interactions make it more fun</h2>
+                      </section>
+                      <section class="project-card item7"></section>
+                      <section class="project-card item8">
+                        <h2>
+                          animating the shadow on the pseudo element makes it
+                          pop out
+                        </h2>
+                      </section>
+                      <section class="project-card item9"></section>
+                      <section class="project-card item10"></section>
+                      <section class="project-card item11 box">
+                        <div class="box-icon"></div>
+                        <div class="box-label">MASTERCLASS</div>
+                        <div class="box-title"></div>
+                        <div class="box-image">
+                          <img
+                            src="https://source.unsplash.com/600x600"
+                            alt=""
+                          />
+                        </div>
+                        <div class="studio-button">
+                          <div class="studio-button-icon">
+                            <i data-feather="external-link"></i>
+                          </div>
+                          <div class="studio-button-label">Open in Studio</div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="z-10" x-show="selected === 'fifth'">
+              <div class="column-1 mx-20 min-w-[650px]">
+                <div class="mb-10">
+                  <div class="basis-full text-slate-200 font-robotoMono">
+                    Get in touch
+                  </div>
+                </div>
+                <div class="flex flex-row mb-3">
+                  <div class="basis-1/2 mr-6">
+                    <input
+                      type="text"
+                      placeholder="Your name"
+                      class="form-input w-full bg-transparent border-b border-slate-500 focus:border-white py-3.5 focus:outline-none placeholder-slate-400 focus:placeholder-white"
+                    />
+                  </div>
+                  <div class="basis-1/2">
+                    <input
+                      type="email"
+                      placeholder="E-mail"
+                      class="form-input w-full bg-transparent border-b border-slate-500 focus:border-white py-3.5 focus:outline-none placeholder-slate-400 focus:placeholder-white"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-row mb-10">
+                  <div class="basis-full">
+                    <textarea
+                      type="textarea"
+                      placeholder="Write your message"
+                      class="form-textarea w-full h-12 bg-transparent border-b border-slate-500 focus:border-white py-3.5 focus:outline-none placeholder-slate-400 focus:placeholder-white"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="flex">
+                  <button
+                    class="border rounded-sm border-[#fff] text-[#fff] py-2.5 px-8 font-robotoMono hover:bg-[#ffffff1f] hover:scale-105 transition-transform duration-700"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contents End -->
+        </div>
+      </div>
+      <script type="text/javascript" src="assets/js/main.js"></script>
+    </div>
+  </body>
+</html>
