@@ -1,0 +1,353 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Colombo Rent a Car",
+      "des": "Colombo Rent a Car is a premier car rental service offering tailored transportation solutions. We delivered a comprehensive digital presence, including a responsive WordPress website, strong branding, and ongoing SEO optimization. Our social media marketing strategies enhanced their customer engagement and brand visibility across Sri Lanka.",
+      "img": "assets/img/work/colombo-rentacar.png",
+      "type": "Website & Branding",
+      "services": "Project-based & consulting.",
+      "client": "Colombo Rent a Car",
+      "industry": "Car Rental",
+      "timeline": "4 Weeks",
+      "solutions": [
+        "WordPress Website",
+        "Branding",
+        "Social Media Marketing",
+        "SEO"
+      ],
+      "tags": ["WordPress", "Branding", "SEO", "Digital Marketing"],
+      "siteurl": "https://colomborentacar.com/"
+    },
+    {
+      "id": 2,
+      "name": "Colombo Transfer",
+      "des": "Colombo Transfer is a transportation business offering reliable transfer services. We delivered a visually compelling WordPress website along with strategic branding, SEO services, and social media marketing to improve their digital outreach and conversion rates.",
+      "img": "assets/img/work/colombo-transfer.png",
+      "type": "Website & Branding",
+      "services": "Project-based & consulting.",
+      "client": "Colombo Transfer",
+      "industry": "Transport",
+      "timeline": "4 Weeks",
+      "solutions": [
+        "WordPress Website",
+        "Branding",
+        "Social Media Marketing",
+        "SEO"
+      ],
+      "tags": ["WordPress", "SEO", "Branding", "Social Media"],
+      "siteurl": "https://colombotransfer.com/"
+    },
+    {
+      "id": 3,
+      "name": "APS Tanzania",
+      "des": "APS Tanzania, a prominent construction business located in Tanzania, embraces innovative approaches to elevate customer satisfaction. Leveraging their expertise in web design and digital marketing, APS Tanzania creates visually captivating and user-friendly websites that seamlessly reflect their clients' brand identities. Through the optimization of website functionality and the implementation of result-driven marketing campaigns, APS Tanzania is committed to enhancing brand visibility, attracting a broader customer base, and fostering significant business growth in the construction industry.",
+      "img": "assets/img/work/01.png",
+      "type": "Website development",
+      "services": "Project-based & consulting.",
+      "client": "APS Tanzania",
+      "industry": "Construction",
+      "timeline": "5 Weeks",
+      "solutions": ["Website Plan and brief", "Website development", "SEO"],
+      "tags": ["HTML", "CSS", "JavaScript", "Wordpress", "Responsive"],
+      "siteurl": "https://apstanzania.co.tz/"
+    },
+    {
+      "id": 4,
+      "name": "Shawlands Cleaning",
+      "des": "Shawlands Cleaning, a Glasgow-based cleaning business, employs cutting- edge strategies to elevate customer satisfaction.With their expertise in web design and digital marketing, Shawlands Cleaning crafts visually captivating and user - friendly websites that perfectly align with their clients' brand identities. By optimizing website functionality and executing result- oriented marketing campaigns, Shawlands Cleaning strives to boost brand visibility, attract a wider customer base, and foster substantial business growth.",
+      "img": "assets/img/work/02.png",
+      "type": "Website development",
+      "services": "Project-based & consulting.",
+      "client": "Shawlands Cleaning",
+      "industry": "Cleaning",
+      "timeline": "4 Weeks",
+      "solutions": ["Website Plan and brief", "Website development", "SEO"],
+      "tags": ["HTML", "CSS", "JavaScript", "UI/UX", "Bootstrap"],
+      "siteurl": "https://shawlandscleaning.co.uk/"
+    },
+    {
+      "id": 5,
+      "name": "Gem City Palace",
+      "des": "Gem City Palace is a retail and e-commerce brand offering luxury products. We developed their website with e-commerce functionality and integrated it with an Odoo ERP system for seamless business management, inventory, and sales tracking.",
+      "img": "assets/img/work/gem-city-palace.png",
+      "type": "Website & E-commerce",
+      "services": "Custom Development & Integration",
+      "client": "Gem City Palace",
+      "industry": "Retail / E-commerce",
+      "timeline": "6 Weeks",
+      "solutions": ["E-commerce Website", "Odoo System Integration"],
+      "tags": ["Odoo", "E-commerce", "Integration", "ERP"],
+      "siteurl": "https://gemcitypalace.com/"
+    },
+    {
+      "id": 6,
+      "name": "Wizkron",
+      "des": "Wizkron is a software solutions company that needed a standout landing page and a cohesive brand identity. We provided a Next.js-based high-performance website, complete branding including logo design, and a managed social media presence. Our SEO strategies helped the company gain visibility among startup and business audiences.",
+      "img": "assets/img/work/wizkron.png",
+      "type": "Website & Branding",
+      "services": "Startup full service",
+      "client": "Wizkron",
+      "industry": "IT Services",
+      "timeline": "3 Weeks",
+      "solutions": [
+        "Landing Page Development",
+        "Full Branding",
+        "Social Media Management",
+        "SEO"
+      ],
+      "tags": ["Next.js", "GSAP", "Branding", "SEO", "Design"],
+      "siteurl": "https://wizkron.com/"
+    },
+    {
+      "id": 7,
+      "name": "RentingPal",
+      "des": "Rentingpal, a prominent apartment rental service based in Canada, is dedicated to establishing a robust market presence. With a strategic approach, Rentingpal aims to forge a unified brand identity for its rental solutions. Through the creation of a unique logo, cohesive visual components, and captivating messaging, Rentingpal strives to connect deeply with its target audience and stand out within the competitive realm of apartment rentals.",
+      "img": "assets/img/work/06.png",
+      "type": "Website development",
+      "services": "Project-based & consulting.",
+      "client": "RentingPal",
+      "industry": "Real Estate",
+      "timeline": "5 Weeks",
+      "solutions": ["Website Plan and brief", "Website development", "SEO"],
+      "tags": ["HTML", "CSS", "JavaScript", "Wordpress", "Responsive"],
+      "siteurl": "https://rentingpal.com/"
+    },
+    {
+      "id": 8,
+      "name": "The Secret Garden",
+      "des": "Mobile App user interface design & prototype.",
+      "img": "assets/img/work/04.png",
+      "type": "Mobile App Prototype",
+      "services": "Prototyping",
+      "client": "Demo",
+      "industry": "Gardening",
+      "timeline": "1 Weeks",
+      "solutions": ["Mobile App Prototype", "Mobile App Mockup", "UI/UX"],
+      "tags": ["Adobe Xd", "UI/UX", "Prototype", "Mockup", "Figma"]
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "clientName": "Colombo Rent a Car",
+      "level": ""
+    },
+    {
+      "id": 2,
+      "clientName": "Colombo Transfer",
+      "level": ""
+    },
+    {
+      "id": 3,
+      "clientName": "Shawlands Cleaning",
+      "level": ""
+    },
+    {
+      "id": 4,
+      "clientName": "RentingPal",
+      "level": ""
+    },
+    {
+      "id": 5,
+      "clientName": "APS Tanzania",
+      "level": ""
+    },
+    {
+      "id": 6,
+      "clientName": "Caffeineon",
+      "level": ""
+    }
+  ],
+  "technologies": [
+    {
+      "id": 1,
+      "technologyName": "<strong class=text-slate-200><i>Frontend Mastery:</i></strong> React.js, Next.js, Angular, TypeScript, JavaScript ES6+, Alpine Js",
+      "level": ""
+    },
+    {
+      "id": 2,
+      "technologyName": "<strong class=text-slate-200><i>Mobile Development:</i></strong> Flutter, Ionic, Cross-platform App Development",
+      "level": ""
+    },
+    {
+      "id": 3,
+      "technologyName": "<strong class=text-slate-200><i>UI/UX Implementation:</i></strong> PrimeNG, ShadCN, Bootstrap, Tailwind CSS, Responsive Design",
+      "level": ""
+    },
+    {
+      "id": 4,
+      "technologyName": "<strong class=text-slate-200><i>Animation & Interaction:</i></strong> GSAP, Three.js, Interactive Web Experiences",
+      "level": ""
+    },
+    {
+      "id": 5,
+      "technologyName": "<strong class=text-slate-200><i>Backend Integration:</i></strong> MERN Stack, RESTful APIs, Node.js, Express.js",
+      "level": ""
+    },
+    {
+      "id": 6,
+      "technologyName": "<strong class=text-slate-200><i>Database Management:</i></strong> MongoDB, SQL, Data Architecture",
+      "level": ""
+    },
+    {
+      "id": 7,
+      "technologyName": "<strong class=text-slate-200><i>Testing Excellence:</i></strong> Cypress, TDD Methodology",
+      "level": ""
+    },
+    {
+      "id": 8,
+      "technologyName": "<strong class=text-slate-200><i>DevOps & Deployment:</i></strong> Docker, CI/CD Pipelines, Git Version Control",
+      "level": ""
+    },
+    {
+      "id": 9,
+      "technologyName": "<strong class=text-slate-200><i>Performance Optimization:</i></strong> SSR, SSG, Lazy Loading, Code Splitting",
+      "level": ""
+    },
+    {
+      "id": 10,
+      "technologyName": "<strong class=text-slate-200><i>Agile Development:</i></strong> Scrum, Sprint Planning, Cross-functional Collaboration",
+      "level": ""
+    },
+    {
+      "id": 11,
+      "technologyName": "<strong class=text-slate-200><i>Headless CMS:</i></strong> Strapi, Wordpress",
+      "level": ""
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "skillName": "<strong class=text-slate-200><i>5+ Years</i></strong> of professional software development experience",
+      "level": ""
+    },
+    {
+      "id": 2,
+      "skillName": "<strong class=text-slate-200><i>Led frontend architecture</i></strong> for enterprise-level applications at Cerexio",
+      "level": ""
+    },
+    {
+      "id": 3,
+      "skillName": "<strong class=text-slate-200><i>Reduced development time by 30%</i></strong> through reusable component libraries",
+      "level": ""
+    },
+    {
+      "id": 4,
+      "skillName": "<strong class=text-slate-200><i>Improved test coverage by 40%</i></strong> with comprehensive testing strategies",
+      "level": ""
+    },
+    {
+      "id": 5,
+      "skillName": "<strong class=text-slate-200><i>Optimized performance by 40%</i></strong> through advanced React optimization techniques",
+      "level": ""
+    },
+    {
+      "id": 6,
+      "skillName": "<strong class=text-slate-200><i>Successfully deployed</i></strong> multiple mobile apps to App Store and Google Play",
+      "level": ""
+    },
+    {
+      "id": 7,
+      "skillName": "<strong class=text-slate-200><i>Full-stack expertise</i></strong> across the entire MERN development stack",
+      "level": ""
+    },
+    {
+      "id": 8,
+      "skillName": "<strong class=text-slate-200><i>Remote collaboration</i></strong> with international teams across Singapore and Australia",
+      "level": ""
+    }
+  ],
+  "workExperiences": [
+    {
+      "id": 1,
+      "employerName": "Cerexio",
+      "joinedYear": "2022",
+      "position": "Software Engineer"
+    },
+    {
+      "id": 2,
+      "employerName": "APS Lanka",
+      "joinedYear": "2020",
+      "position": "Assitant Software Developer"
+    },
+    {
+      "id": 3,
+      "employerName": "PixelEye Solutions",
+      "joinedYear": "2019",
+      "position": "Associate Software Developer"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "serviceName": "Mobile App Development",
+      "serviceDesc": "Transform your ideas into powerful mobile experiences with cross-platform development expertise. I specialize in Flutter and Ionic frameworks to deliver native-quality apps for both iOS and Android platforms. From concept to App Store deployment, I handle the entire mobile development lifecycle including UI/UX implementation, API integrations, testing, and ongoing maintenance.",
+      "serviceKeyOfferings": [
+        "Cross-platform mobile app development",
+        "Native iOS and Android optimization",
+        "App Store and Google Play deployment",
+        "Mobile UI/UX design implementation",
+        "Performance optimization and testing",
+        "Ongoing maintenance and updates"
+      ],
+      "level": ""
+    },
+    {
+      "id": 2,
+      "serviceName": "Web Development",
+      "serviceDesc": "Create stunning, high-performance websites and web applications that drive results. With expertise in React, Next.js, and Angular, I build everything from simple landing pages to complex enterprise applications. Every project features responsive design, SEO optimization, and cutting-edge development practices.",
+      "serviceKeyOfferings": [
+        "Custom web application development",
+        "React.js and Next.js specialization",
+        "Server-side rendering (SSR) and static generation (SSG)",
+        "Progressive Web App (PWA) development",
+        "E-commerce platform development",
+        "API integration and backend connectivity"
+      ],
+      "level": ""
+    },
+    {
+      "id": 3,
+      "serviceName": "SaaS Development",
+      "serviceDesc": "Build scalable Software-as-a-Service platforms that grow with your business. I specialize in creating robust, user-friendly SaaS applications using modern tech stacks. From user authentication to payment processing, I handle all aspects of SaaS development including multi-tenancy, data security, and performance optimization.",
+      "serviceKeyOfferings": [
+        "Full-stack SaaS application development",
+        "Multi-tenant architecture design",
+        "User management and authentication systems",
+        "Payment gateway integrations",
+        "Dashboard and analytics implementation",
+        "Scalable cloud deployment solutions"
+      ],
+      "level": ""
+    },
+    {
+      "id": 4,
+      "serviceName": "UI/UX Implementation",
+      "serviceDesc": "Bring your designs to life with pixel-perfect implementation and enhanced user experiences. I collaborate closely with designers to transform mockups into interactive, responsive interfaces. My expertise includes modern CSS frameworks, animation libraries, and accessibility standards to ensure your digital products look amazing and function flawlessly.",
+      "serviceKeyOfferings": [
+        "Design-to-code implementation",
+        "Responsive web design development",
+        "Interactive animations with GSAP and Three.js",
+        "Component library development",
+        "Accessibility compliance (WCAG)",
+        "Cross-browser compatibility testing"
+      ],
+      "level": ""
+    },
+    {
+      "id": 5,
+      "serviceName": "Social Media & Branding Solutions",
+      "serviceDesc": "Establish your digital presence with cohesive branding and engaging social media experiences. I create custom web solutions that integrate seamlessly with your brand identity, including social media dashboards, content management systems, and brand-consistent web applications that amplify your online presence.",
+      "serviceKeyOfferings": [
+        "Brand-consistent web development",
+        "Social media integration and dashboards",
+        "Content management system development",
+        "Digital brand experience creation",
+        "Social media automation tools",
+        "Analytics and reporting platforms"
+      ],
+      "level": ""
+    }
+  ]
+}
